@@ -56,12 +56,28 @@ width(ir)
 ir = IRanges(start=c(3,5,17), end=c(10,8,20))
 ir
 
+# accessor/replacement functions
 length(ir)
 start(ir)
 end(ir)
-width(ir)
+width(ir) # see also width(ir) = 10
+
 
 ir = IRanges(5,10)
+
+ir
 shift(ir, -2)
-narrow(ir, start=2)
-# see also the flank() function
+
+ir
+ir - 2
+ir + 2
+ir * 2
+ir * -2
+
+ir
+narrow(ir, 2)
+
+ir
+flank(ir, 2)
+
+# see also: range, reduce, gaps, disjoin
