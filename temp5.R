@@ -56,7 +56,7 @@ plotRanges(resize(ir,1, fix="end"), xlim=c(0,600))
 
 ###############################################################################
 
-library(GRanges)
+library(GenomicRanges)
 
 gr <- GRanges(seqnames="chr1", strand="+", ranges=IRanges(start=c(1,3,5), end=c(3,5,7)))
 gr

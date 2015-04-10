@@ -80,4 +80,4 @@ narrow(ir, 2)
 ir
 flank(ir, 2)
 
-# see also: range, reduce, gaps, disjoin
+# see also: resize, range, reduce, intersect, gaps, disjoin
