@@ -1,6 +1,10 @@
 library(Biostrings)
 library(rtracklayer)
 
+# library(devtools)
+# install_github("genomicsclass/ERBS")
+library(ERBS)
+
 available.genomes()
 
 library(BSgenome.Hsapiens.UCSC.hg19)
