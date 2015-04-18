@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ###############################################################################
 ## ExpressionSet (for microarray data)                                       ##
 ###############################################################################
@@ -96,3 +97,34 @@ metadata(rowData(se))
 exptData(se)
 exptData(se)$MIAME
 
+=======
+# library(devtools)
+# install_github("genomicsclass/ERBS")
+library(ERBS)
+
+data(HepG2)
+data(GM12878)
+
+HepG2 # HepG2 cell line
+GM12878 # GM12878 cell line
+
+library(BSgenome.Hsapiens.UCSC.hg19)
+
+Hsapiens
+
+chr17 = Hsapiens$chr17
+chr17
+
+hepseq = getSeq(Hsapiens, HepG2)
+hepseq
+
+length(hepseq) == length(HepG2)
+all(width(hepseq) == width(HepG2))
+
+rhepseq = getSeq(Hsapiens, shift(HepG2, 1000))
+
+mot = "TCAAGGTCA"
+
+sum(vcountPattern(mot, hepseq)) + sum(vcountPattern(mot, reverseComplement(hepseq)))
+sum(vcountPattern(mot, rhepseq)) + sum(vcountPattern(mot, reverseComplement(rhepseq)))
+>>>>>>> f24ad0feac8ed22e87b68bbd07eec4c2e257ce55

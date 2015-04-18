@@ -1,10 +1,5 @@
-library(GenomicFeatures)
-library(GenomicRanges)
-library(IRanges)
-
 # library(devtools)
 # install_github("genomicsclass/ERBS")
-
 library(ERBS)
 
 data(HepG2)

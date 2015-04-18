@@ -1,7 +1,5 @@
 # library(devtools)
 # install_github("genomicsclass/ph525x")
-
-library(IRanges)
 library(GenomicRanges)
 library(ph525x) # for plotRanges
 

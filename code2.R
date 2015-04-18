@@ -1,6 +1,5 @@
 # library(devtools)
 # install_github("genomicsclass/ERBS")
-
 library(ERBS)
 
 data(HepG2)
