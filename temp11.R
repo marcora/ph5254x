@@ -1,5 +1,4 @@
 library(Biostrings)
-library(rtracklayer)
 
 available.genomes()
 
@@ -17,11 +16,3 @@ class(c17m)
 
 c22m = BSgenome.Hsapiens.UCSC.hg19.masked$chr22
 c22m
-
-ch = import.chain("hg38ToHg19.over.chain")
-ch
-
-
-library(TxDb.Hsapiens.UCSC.hg38.knownGene)
-
-g38 = genes(TxDb.Hsapiens.UCSC.hg38.knownGene)
