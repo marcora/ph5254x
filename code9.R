@@ -11,40 +11,40 @@ library(GEOquery)
 
 geoq = getGEO("GSE9514")
 
-e = geoq[[1]]
+es = geoq[[1]]
 
-e
+es
 
-dim(e)
-nrow(e)
-ncol(e)
+dim(es)
+nrow(es)
+ncol(es)
 
 # expression data as a matrix (probesets intensities x samples)
-exprs(e)[1:3, 1:3]
+exprs(es)[1:3, 1:3]
 
-# meta data/information about the columns/samples
-pData(e)
+# metadata/information about the columns/samples
+pData(es)
 
-dim(pData(e))
+dim(pData(es))
 
-names(pData(e))
+names(pData(es))
 
-pData(e)$characteristics_ch1 # conditions
+pData(es)$characteristics_ch1 # conditions
 
-table(pData(e)$characteristics_ch1) # to inspect the number of replicates for each condition
+table(pData(es)$characteristics_ch1) # to inspect the number of replicates for each condition
 
-# meta data/information about the rows/probesets
-fData(e)
+# metadata/information about the rows/probesets
+head(fData(es))
 
-dim(fData(e))
+dim(fData(es))
 
-names(fData(e))
+names(fData(es))
 
-head(rownames(fData(e)))
+head(rownames(fData(es)))
 
 # meta data/information about the experiment and other annotation
-experimentData(e)
-annotation(e)
+experimentData(es)
+annotation(es)
 
 ###############################################################################
 ## SummarizedExperiment (for ngs data)                                       ##
@@ -68,7 +68,7 @@ nrow(se)
 ncol(se)
 
 # expression data as a matrix (counts x samples)
-assay(e)[1:3, 1:3]
+assay(se)[1:3, 1:3]
 
 # meta data/information about the columns/samples
 colData(se)
